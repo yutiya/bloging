@@ -1,0 +1,272 @@
+
+
+
+// border-radius()
+// 	-webkit-border-radius: arguments
+// 	-moz-border-radius: arguments
+// 	border-radius: arguments
+
+// body a
+// 	display: inline-block
+// 	padding: 2px 5px
+// 	font: 12px/1.4 Arial, sans-serif
+// 	background: black
+// 	color: #eee
+// 	border-radius(2px)
+
+// form input
+// 	padding: 5px
+// 	border: 1px solid
+// 	border-radius: 5px
+
+// // 选择器
+
+// body
+// 	color white
+
+// pad(n)
+// 	padding (- n)
+
+// body
+// 	pad(5px)
+
+// foo bar baz,
+// form input
+// > a
+// 	border 1px solid
+
+// textarea,
+// input
+// 	color #A7A7A7
+// 	&:hover
+// 		color #000
+
+// // 变量
+
+// font-size = 14px
+
+// body
+// 	font font-size Arial, sans-seri
+
+// #logo
+// 	position absolute
+// 	top 50%
+// 	left 50%
+// 	width 150px
+// 	height 50px
+// 	margin-left -(@width/2)
+// 	margin-top - (@height/2)
+
+// body
+// 	color red
+// 	ul
+// 		li
+// 			color blue
+// 			a
+// 				background-color @color
+
+// // 插值
+
+// verdor(prop, args)
+// 	-webkit-{prop} args
+// 	-moz-{prop} args
+// 	{prop} args
+
+
+// button
+// 	border-radius 1px 2px/3px 4px
+
+// table
+// 	for row in 1 2 3 4 5
+// 		tr:nth-child({row})
+// 			height: 10px * row // 10 * row px  //  (10 * row) px
+
+// //	运算符
+
+// body
+// 	n = 5
+// 	foo (n)em
+// 	foo	(n)%
+// 	foo (n * 5)px
+// 	foo unit(n + 5, '%')
+
+// a = 15px
+// div
+// 	if a is defined
+// 		padding 5px
+// 	if b					//都为真
+// 		margin 5px
+
+// pad(types = padding, n = 5px)
+// 	if padding in types
+// 		padding n
+// 	if margin in types
+// 		margin n
+
+// body
+// 	pad()
+
+// body
+// 	pad(margin)
+
+// body
+// 	pad(padding margin, 10px)
+
+
+// // 混合书写
+// border-radius(n)
+// 	-webkit-border-radius n
+// 	-moz-border-radius n
+// 	border-radius n
+
+// form input[type=button]
+// 	border-radius(5px)
+
+// support-for-ie ?= true
+// opacity(n)
+// 	opacity n
+// 	if support-for-ie
+// 		filter unquote('progid:DXImageTransform.Microsoft.Alpha(opacity=' + round(n * 100) + ')')
+
+// #logo
+// 	&:hover
+// 		opacity 0.5
+
+// iniline-list()
+// 	li
+// 		display inline
+// comma-list()
+// 	iniline-list()
+// 	li
+// 		&:after
+// 			content ','
+// 		&:last-child:after
+// 			content ''
+
+// ul
+// 	comma-list()
+
+// // 方法
+
+// invoke(a, b, fn)
+// 	fn(a, b)
+
+// add(a, b)
+// 	a + b
+
+// body
+// 	padding invoke(5, 10, add)
+// 	padding invoke(5, 10, sub)
+
+// get(hash, key)
+// 	return pair[1] if pair[0] == key for pair in hash
+
+// div
+// 	hash = (one 1) (two 2) (three 3)
+// 	padding get(hash, two) px
+
+//混合书写
+body {
+	color: rgba(255, 200, 100, 0.5);
+	color: rgba(red: 255, green: 200, blue: 100, alpha: 0.5);
+	color: rgba(alpha: 0.5, blue: 100, red: 255, 200);
+	color: rgba(alpha: 0.5, blue: 100, 255, 200);
+}
+
+// 查看函数或混合书写中接受的参数
+p(rgba)
+// ==>
+// inspect: rgba(red, green, blue, alpha)
+
+//内置方法
+/*
+red(#c00)
+green(#0c0)
+blue(#00c)
+alpha(rgba(0, 0, 0, 0.3))
+dark(black)
+light(white)
+hue(hsla(50deg, 100%, 80%, 80%))
+saturation(hsla(50deg, 100%, 80%, 80%))
+lightness(hsla(50deg, 100%, 80%, 80%))
+
+nums = 1 2
+push(nums, 3, 4, 5)
+
+nums = 4 5
+unshift(nums, 3, 2, 1)
+
+pairs = (one 1) (two 2) (three 3)
+keys(pairs)
+values(pairs)
+
+typeof(12)
+typeof(#fff)
+
+unit(15in)
+unit(10%, px)
+
+match('^foo(bar)?', foo)
+match('^foo(bar)?', foobar)
+
+abs(-5px)
+ceil(5.5in)
+floor(5.6px)
+round(5.5px)
+min(1, 5)
+max(1, 5)
+even(6px)
+odd(5mm)
+sum(1 2 3)
+avg(1 2 3)
+join(',', 1 2 3)
+
+hsla(10, 50, 30, 80)
+rgba(255, 0, 0, 1)
+rgb(255, 204, 0)
+
+lighten(#2c2c2c, 30)
+darken(#d62828, 30)
+desaturate(#f00, 40%)
+saturate(#c33, 40%)
+invert(#d62828)
+
+unquote("sans-serif")
+s('bar()')
+s('bar(%s)', 'baz')
+// warn("oh noes!")
+// error('add() expects units')
+*/
+
+op = '+'
+operate(op, 15, 5)
+last(1 2 3)
+length((1 2 3 4))
+p('test')
+opposite-position(right)
+
+//image-size('1.jpg')
+add-property('bar', 1 2 3)
+stop(50%, orange)
+
+box-shadow(args...)
+		-webkit-box-shadow args
+		-moz-box-shadow args
+		box-shadow args
+#login
+		box-shadow 1px 2px 5px #eee
+
+box-shadow(offset-x, args...)
+		got-offset-x offset-x
+		-webkit-box-shadow offset-x args
+		-moz-box-shadow offset-x args
+		box-shadow offset-x args
+#login
+	box-shadow 1px 2px 5px #eee
+	
+box-shadow()
+		-webkit-box-shadow arguments
+		-moz-box-shadow arguments
+		box-shadow arguments
+#login
+		box-shadow #ddd 1px 1px, #eee 2px 2px

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- 当前pom版本 -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>反写的公司网址+项目名</groupId>
+  <artifactId>项目名+模块名</artifactId>
+  <!--
+    snapshot 快照
+    alpha 内部测试
+    beta 公测
+    release 稳定
+    GA 正式发布
+  -->
+  <version>当前项目的版本号,1.0.0,大版本.分支.小版本</version>
+  <packaging>默认打包为jar,可以不写, 或者war、zip、pom</packaging>
+  <name>项目描述名</name>
+  <url>项目网址</url>
+  <description>项目描述</description>
+  <developers>开发人员名单</developers>
+  <licenses>开源协议</licenses>
+  <organization>组织信息</organization>
+
+  <dependencies>
+    <dependency>
+      <groupId></groupId>
+      <artifactId></artifactId>
+      <version></version>
+      <type></type>
+      <scope></scope><!-- 依赖范围 -->
+      <optional></optional><!-- 设置依赖是否可选,false子项目默认自动引入,true子项目必须自行引入 -->
+      <!-- 解除依赖传递 -->
+      <exclusions>
+        <exclusion>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+  <!-- 依赖管理 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency></dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <!-- 插件 -->
+    <plugins>
+      <plugin>
+        <groupId></groupId>
+        <artifactId></artifactId>
+        <version></version>
+      </plugin>
+    </plugins>
+  </build>
+  <parent></parent>
+  <modules>
+    <module></module>
+  </modules>
+</project>
+
